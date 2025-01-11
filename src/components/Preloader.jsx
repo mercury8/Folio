@@ -35,7 +35,7 @@ const Preloader = ({ onComplete }) => {
     <div className="fixed inset-0 bg-black flex justify-center items-center z-50">
       <div
         ref={logoRef}
-        className="logo w-16 h-16 bg-white rounded-full flex items-center justify-center"
+        className="logo w-16 h-16 flex items-center justify-center"
       >
         {/* Add your logo or a letter */}
         {/* <span className="text-black text-xl font-bold">Logo</span> */}
