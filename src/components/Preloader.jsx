@@ -12,12 +12,17 @@ const Preloader = ({ onComplete }) => {
     });
 
     tl.to(logoRef.current, {
-      y: -50,
+      opacity: 1,
       duration: 0.5,
-      ease: "power1.out",
-      repeat: 2,
-      yoyo: true,
+      ease: "power1.in",
     })
+      .to(logoRef.current, {
+        y: -50,
+        duration: 0.5,
+        ease: "power1.out",
+        repeat: 2,
+        yoyo: true,
+      })
       .to(logoRef.current, {
         y: 0,
         duration: 0.5,
@@ -36,6 +41,7 @@ const Preloader = ({ onComplete }) => {
       <div
         ref={logoRef}
         className="logo w-16 h-16 flex items-center justify-center"
+        style={{ opacity: 0 }}
       >
         {/* Add your logo or a letter */}
         {/* <span className="text-black text-xl font-bold">Logo</span> */}
